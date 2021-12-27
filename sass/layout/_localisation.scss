@@ -1,0 +1,10 @@
+#localisation {
+    text-align: center;
+    font-weight: bold;
+    background-color: #EAEAEA;
+    box-shadow: inset 0 0.5rem 1rem #CECECE;
+    height: 3rem;
+    & i {
+        padding-right: 1rem;
+    }
+}

@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: center;
+    & h1 {
+        margin: 20px 0 0 0;
+    }
+}
+
+.header__logo {
+    display: inline-block;
+    width: 10rem;
+}

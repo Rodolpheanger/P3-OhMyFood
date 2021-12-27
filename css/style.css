@@ -1,3 +1,35 @@
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
 
+.lorem {
+  color: transparent;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header h1 {
+  margin: 20px 0 0 0;
+}
+
+.header__logo {
+  display: inline-block;
+  width: 10rem;
+}
+
+#localisation {
+  text-align: center;
+  font-weight: bold;
+  background-color: #EAEAEA;
+  box-shadow: inset 0 0.5rem 1rem #CECECE;
+  height: 3rem;
+}
+#localisation i {
+  padding-right: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */
