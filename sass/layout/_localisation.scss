@@ -1,0 +1,13 @@
+#localisation {
+    @include flex-center;
+    font-weight: bold;
+    background-color: #EAEAEA;
+    box-shadow: inset 0 .2rem .2rem #CECECE;
+    height: 3.1rem;
+    & i, span {
+        margin-top: 1rem;
+    }
+    & i {
+        margin-right: .6rem;
+    }
+}
