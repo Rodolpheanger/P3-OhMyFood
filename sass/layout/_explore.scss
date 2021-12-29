@@ -1,7 +1,6 @@
-#explore {
+.explore {
     background-color: $color-bg-main;
-    flex-direction: column;
-    @include flex-center;
+    @include flex-center (column);
     text-align: center;
     padding: 2.5rem;
     & h2 {
@@ -10,5 +9,11 @@
     }
     & p {
         margin-bottom: 1.5rem;
+    }
+    &__btn {
+        @include btn;
+        &:hover {
+            @include btn(hover);
+        }
     }
 }

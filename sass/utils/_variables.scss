@@ -4,6 +4,8 @@ $color-tertiary: #99E2D0;
 $color-bg-main: #f6f6f6;
 $color-bg-footer: #353535;
 
+$flex-direction: (row: row, column: column);
+
 $box-shadow: (
     normal: 0 .2rem .6rem rgba(0, 0, 0, 0.4),
     hover: 0 .2rem 1rem rgba(0, 0, 0, 0.7)
@@ -12,4 +14,9 @@ $box-shadow: (
 $btn-bg: (
     normal: linear-gradient(-5deg, $color-primary, $color-secondary),
     hover: linear-gradient(-5deg, lighten($color-primary, 3%), lighten($color-secondary, 3%))
+    );
+
+$user-manual__btn-bg: (
+    normal: $color-bg-main,
+    hover: lighten($color-primary, 10%)
     );
