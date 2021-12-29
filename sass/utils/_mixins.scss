@@ -1,4 +1,25 @@
-@mixin flex-center {
+@mixin flex-center ($direction: row){
     display: flex;
     justify-content: center;
-    }
+    align-items: center;
+    flex-direction: map-get($flex-direction, $direction);
+}
+
+@mixin btn ($state: normal){
+    background: map-get($btn-bg, $state);
+    border: none;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3rem;
+    box-shadow: map-get($box-shadow, $state);
+    padding: 1rem 1.4rem;
+} 
+
+// ------------------------------------------------------------------- reprendre de là ------------------------------------------------------
+
+@mixin user-manual__btn ($state: normal){
+    background-color: map-get($user-manual__btn-bg, $state); 
+    padding: 1rem 1.5rem;
+    box-shadow: map-get($box-shadow, $state);
+    border-radius: 1rem;
+}
