@@ -1,0 +1,14 @@
+#explore {
+    background-color: $color-bg-main;
+    flex-direction: column;
+    @include flex-center;
+    text-align: center;
+    padding: 2.5rem;
+    & h2 {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+    & p {
+        margin-bottom: 1.5rem;
+    }
+}
