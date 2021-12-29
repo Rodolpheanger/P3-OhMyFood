@@ -1,0 +1,18 @@
+footer {
+    background-color: $color-bg-footer;
+    padding: 1.25rem;
+    color: #fff;
+    & ul {
+        padding: 1.25rem 0;
+        line-height: 1.5rem;
+    }
+    & i {
+        padding-right: .8rem;
+    }
+    & a {
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+      }
+}
