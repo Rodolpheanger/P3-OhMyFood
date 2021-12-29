@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .lorem {
   color: transparent;
 }
@@ -46,6 +51,21 @@ header h1 {
 
 footer {
   background-color: #353535;
+  padding: 1.25rem;
+  color: #fff;
+}
+footer ul {
+  padding: 1.25rem 0;
+  line-height: 1.5rem;
+}
+footer i {
+  padding-right: 0.8rem;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
