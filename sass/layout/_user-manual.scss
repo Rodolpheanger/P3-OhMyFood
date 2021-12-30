@@ -1,18 +1,65 @@
 .user-manual {
     padding: 3rem 1.25rem;
+
+    @include tablet {
+        text-align: center;
+    }
+        &__container {
+            @include desktop {
+               display: flex;
+               justify-content: space-evenly;
+            }
+        }
+        & h2 {
+            margin-bottom: 1.25rem;
+            @include desktop {
+                text-align: center;
+            }
+        
+        }
         &__step {
-            @include flex-center;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+            @include tablet {
+                @include flex-center;
+            }
+            @include desktop {
+                width: 30%;
+            }
+        }
+        &__btn {
+            @include user-manual__btn;
+            position: relative;
+            width: 97%;
+            @media  screen and (min-width: 450px) and (max-width: 650px) {
+                width: 98%;    
+            }
+            @media  screen and (min-width: 650px) and (max-width: 768px) {
+                width: 99%;    
+            }
+            @include desktop {
+                width: 100%;
+            }
+
+                &:hover {
+                    @include user-manual__btn(hover);
+
+                    & > i {
+                        color: map-get($color-user-manual__i, hover);
+                    }
+                }
         }
         &__number {
             color: #fff;
             background-color: $color-primary;
             border-radius: 2rem;
             padding: .16rem .5rem;
-        }
-        &__btn {
-            @include user-manual__btn;
-            &:hover {
-                @include user-manual__btn(hover);
+            position: absolute;
+            left: -1rem;
+        }    
+        & i {
+            color: map-get($color-user-manual__i, default);
+            margin-right: 1rem;
             }
-        }
 }
