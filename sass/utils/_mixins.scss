@@ -38,3 +38,9 @@
     border-radius: 1rem;
     cursor: map-get($cursor, $state);
 }
+
+@mixin card-style ($state: default) {
+    border-radius: $border-radius;
+    box-shadow: map-get($box-shadow, $state);
+    height: 18rem;
+}

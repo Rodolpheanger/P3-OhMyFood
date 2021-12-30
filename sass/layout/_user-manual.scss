@@ -10,8 +10,8 @@
                justify-content: space-evenly;
             }
         }
-        & h2 {
-            margin-bottom: 1.25rem;
+        h2 {
+            @extend .default-margin-bottom;
             @include desktop {
                 text-align: center;
             }
@@ -20,7 +20,7 @@
         &__step {
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 1rem;
+            @extend .default-margin-bottom;
             @include tablet {
                 @include flex-center;
             }
@@ -58,7 +58,7 @@
             position: absolute;
             left: -1rem;
         }    
-        & i {
+        i {
             color: map-get($color-user-manual__i, default);
             margin-right: 1rem;
             }

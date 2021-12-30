@@ -3,12 +3,12 @@
     @include flex-center (column);
     text-align: center;
     padding: 2.5rem;
-    & h2 {
+    h2 {
         padding: 0 1rem;
-        margin-bottom: 1rem;
+        @extend .default-margin-bottom;
     }
-    & p {
-        margin-bottom: 1.5rem;
+    p {
+        @extend .default-margin-bottom;
     }
     &__btn {
         @include btn;

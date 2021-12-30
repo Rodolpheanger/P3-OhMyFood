@@ -11,6 +11,8 @@ $flex-direction: (row: row, column: column);
 
 $breakpoints: (tablet-min: 768px, tablet-max: 991px, desktop: 992px);
 
+$border-radius: 1em;
+
 $box-shadow: (
     default: 0 .2rem .6rem rgba(0, 0, 0, 0.4),
     hover: 0 .2rem 1rem rgba(0, 0, 0, 0.7)
