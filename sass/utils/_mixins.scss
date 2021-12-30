@@ -5,7 +5,22 @@
     flex-direction: map-get($flex-direction, $direction);
 }
 
-@mixin btn ($state: normal){
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+@mixin tablet-and-desktop {
+    @media screen and (min-width: map-get($breakpoints, tablet-min)) {
+        @content;
+    }
+}
+@mixin btn ($state: default){
     background: map-get($btn-bg, $state);
     border: none;
     font-weight: 700;
@@ -13,13 +28,18 @@
     border-radius: 3rem;
     box-shadow: map-get($box-shadow, $state);
     padding: 1rem 1.4rem;
+    cursor: map-get($cursor, $state);
 } 
 
-// ------------------------------------------------------------------- reprendre de là ------------------------------------------------------
-
-@mixin user-manual__btn ($state: normal){
+@mixin user-manual__btn ($state: default){
     background-color: map-get($user-manual__btn-bg, $state); 
-    padding: 1rem 1.5rem;
+    padding: 1.25rem 1.75rem;
     box-shadow: map-get($box-shadow, $state);
     border-radius: 1rem;
+    cursor: map-get($cursor, $state);
+}
+
+@mixin card-style ($state: default) {
+    border-radius: $border-radius;
+    box-shadow: map-get($box-shadow, $state);
 }

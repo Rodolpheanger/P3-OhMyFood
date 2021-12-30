@@ -3,20 +3,27 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-bg-main: #f6f6f6;
 $color-bg-footer: #353535;
+$color-user-manual__i: (default: #7E7E7E, hover: $color-primary);
+
+$cursor: (default: auto, hover: pointer);
 
 $flex-direction: (row: row, column: column);
 
+$breakpoints: (tablet-min: 768px, tablet-max: 991px, desktop: 992px);
+
+$border-radius: 1em;
+
 $box-shadow: (
-    normal: 0 .2rem .6rem rgba(0, 0, 0, 0.4),
+    default: 0 .2rem .6rem rgba(0, 0, 0, 0.4),
     hover: 0 .2rem 1rem rgba(0, 0, 0, 0.7)
     );
 
 $btn-bg: (
-    normal: linear-gradient(-5deg, $color-primary, $color-secondary),
+    default: linear-gradient(-5deg, $color-primary, $color-secondary),
     hover: linear-gradient(-5deg, lighten($color-primary, 3%), lighten($color-secondary, 3%))
     );
 
 $user-manual__btn-bg: (
-    normal: $color-bg-main,
-    hover: lighten($color-primary, 10%)
+    default: $color-bg-main,
+    hover: lighten($color-primary, 35%)
     );
