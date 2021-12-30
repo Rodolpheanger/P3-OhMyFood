@@ -2,9 +2,21 @@ footer {
     background-color: $color-bg-footer;
     padding: 1.25rem;
     color: #fff;
+    & p {
+        @include tablet-and-desktop {
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+    }
     & ul {
         padding: 1.25rem 0;
         line-height: 1.5rem;
+        @include tablet-and-desktop {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1.25rem;
+        }
     }
     & i {
         padding-right: .8rem;

@@ -9,7 +9,7 @@ $cursor: (default: auto, hover: pointer);
 
 $flex-direction: (row: row, column: column);
 
-$breakpoints: (tablet-min: 768px, tablet-max: 991px, desktop-min: 992px, desktop-max: 1920px, wide-screen: 1991px);
+$breakpoints: (tablet-min: 768px, tablet-max: 991px, desktop: 992px);
 
 $box-shadow: (
     default: 0 .2rem .6rem rgba(0, 0, 0, 0.4),

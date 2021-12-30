@@ -1,3 +1,8 @@
+body {
+  max-width: 1920px;
+  margin: auto;
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -114,7 +119,7 @@ footer p {
     text-align: center;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1920px) {
+@media screen and (min-width: 992px) {
   .user-manual__container {
     display: flex;
     justify-content: space-evenly;
@@ -123,7 +128,7 @@ footer p {
 .user-manual h2 {
   margin-bottom: 1.25rem;
 }
-@media screen and (min-width: 992px) and (max-width: 1920px) {
+@media screen and (min-width: 992px) {
   .user-manual h2 {
     text-align: center;
   }
@@ -141,7 +146,7 @@ footer p {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1920px) {
+@media screen and (min-width: 992px) {
   .user-manual__step {
     width: 30%;
   }
@@ -165,7 +170,7 @@ footer p {
     width: 99%;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1920px) {
+@media screen and (min-width: 992px) {
   .user-manual__btn {
     width: 100%;
   }
@@ -193,14 +198,34 @@ footer p {
   margin-right: 1rem;
 }
 
+nav {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
 footer {
   background-color: #353535;
   padding: 1.25rem;
   color: #fff;
 }
+@media screen and (min-width: 768px) {
+  footer p {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+}
 footer ul {
   padding: 1.25rem 0;
   line-height: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.25rem;
+  }
 }
 footer i {
   padding-right: 0.8rem;
