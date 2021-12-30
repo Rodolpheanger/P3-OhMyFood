@@ -42,5 +42,4 @@
 @mixin card-style ($state: default) {
     border-radius: $border-radius;
     box-shadow: map-get($box-shadow, $state);
-    height: 18rem;
 }

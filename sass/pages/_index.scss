@@ -1,0 +1,158 @@
+//  localisation bar
+
+.localisation {
+    @include flex-center;
+    font-weight: bold;
+    background-color: #EAEAEA;
+    box-shadow: inset 0 .2rem .2rem #CECECE;
+    height: 3.1rem;
+    i {
+        margin-right: .6rem;
+    }
+}
+
+// banner explore
+
+.explore {
+    background-color: $color-bg-main;
+    @include flex-center (column);
+    text-align: center;
+    padding: 2.5rem;
+    h2 {
+        padding: 0 1rem;
+        @extend .default-margin-bottom;
+    }
+    p {
+        @extend .default-margin-bottom;
+    }
+    &__btn {
+        @include btn;
+        &:hover {
+            @include btn(hover);
+        }
+    }
+}
+
+// site user manual
+
+.user-manual {
+    padding: 3rem 1.25rem;
+
+    @include tablet {
+        text-align: center;
+    }
+        &__container {
+            @include desktop {
+               display: flex;
+               justify-content: space-evenly;
+            }
+        }
+        h2 {
+            @extend .default-margin-bottom;
+            @include desktop {
+                text-align: center;
+            }
+        
+        }
+        &__step {
+            display: flex;
+            justify-content: flex-end;
+            @extend .default-margin-bottom;
+            @include tablet {
+                @include flex-center;
+            }
+            @include desktop {
+                width: 30%;
+            }
+        }
+        &__btn {
+            @include user-manual__btn;
+            position: relative;
+            width: 97%;
+            @media  screen and (min-width: 450px) and (max-width: 650px) {
+                width: 98%;    
+            }
+            @media  screen and (min-width: 650px) and (max-width: 768px) {
+                width: 99%;    
+            }
+            @include desktop {
+                width: 100%;
+            }
+
+                &:hover {
+                    @include user-manual__btn(hover);
+
+                    & > i {
+                        color: map-get($color-user-manual__i, hover);
+                    }
+                }
+        }
+        &__number {
+            color: #fff;
+            background-color: $color-primary;
+            border-radius: 2rem;
+            padding: .16rem .5rem;
+            position: absolute;
+            left: -1rem;
+        }    
+        i {
+            color: map-get($color-user-manual__i, default);
+            margin-right: 1rem;
+            }
+}
+
+// restaurants result
+
+.restaurant {
+    padding: 3rem 1.25rem;
+    background-color: $color-bg-main;
+    h2 {
+        @extend .default-margin-bottom;
+    }
+    &__card {
+        display: block;
+        position: relative;
+        @extend .default-margin-bottom;
+        @include card-style;
+        height: 16rem;
+        &:hover {
+            @include card-style (hover);
+        }
+    }
+    img {
+        object-fit: cover;
+        border-radius: $border-radius $border-radius 0 0;
+        width: 100%;
+        height: 70%;
+        z-index: 1;
+    }
+
+    &__notification-new {
+        display: block;
+        padding: .4rem .8rem;
+        font-size: .8rem;
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 40%);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 2;
+
+    }
+
+    &__description {
+        position: relative;
+        padding: .8rem;
+        h3 {
+            font-weight: 900;
+            margin-bottom: .5rem;
+        }
+    }
+    
+    .fa-heart {
+        position: absolute;
+        top:30%;
+        right: 1.5rem;
+        font-size: 1.5rem;
+    }
+}

@@ -70,6 +70,38 @@ nav {
   left: 1.5rem;
 }
 
+footer {
+  background-color: #353535;
+  padding: 1.25rem;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  footer p {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+}
+footer ul {
+  padding: 1.25rem 0;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+footer i {
+  padding-right: 0.8rem;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -209,12 +241,11 @@ nav {
   position: relative;
   border-radius: 1em;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
-  height: 18rem;
+  height: 16rem;
 }
 .restaurant__card:hover {
   border-radius: 1em;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
-  height: 18rem;
 }
 .restaurant img {
   object-fit: cover;
@@ -225,9 +256,10 @@ nav {
 }
 .restaurant__notification-new {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
   background-color: #99E2D0;
-  color: #217460;
+  color: #278870;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -235,45 +267,17 @@ nav {
 }
 .restaurant__description {
   position: relative;
-  padding: 1rem;
+  padding: 0.8rem;
+}
+.restaurant__description h3 {
+  font-weight: 900;
+  margin-bottom: 0.5rem;
 }
 .restaurant .fa-heart {
   position: absolute;
   top: 30%;
   right: 1.5rem;
   font-size: 1.5rem;
-}
-
-footer {
-  background-color: #353535;
-  padding: 1.25rem;
-  color: #fff;
-}
-@media screen and (min-width: 768px) {
-  footer p {
-    text-align: center;
-    margin: 1rem 0;
-    font-size: 1.2rem;
-  }
-}
-footer ul {
-  padding: 1.25rem 0;
-  line-height: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  footer ul {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-footer i {
-  padding-right: 0.8rem;
-}
-footer a {
-  color: #fff;
-}
-footer a:hover {
-  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
