@@ -1,0 +1,29 @@
+#menus {
+    background-color: $color-bg-main;
+}
+.menus {
+    position: relative;
+    top: -35px;
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color-bg-main;
+    padding: 1.25rem;
+    h2 {
+        @extend %default-margin-bottom;
+    }
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: .2rem;
+    }
+    hr {
+        background-color: $color-tertiary;
+        border: none;
+        height: .2rem;
+        width: 2.5rem;
+    }
+    .menus__btn {
+        padding: 1rem 3rem;
+        display: block;
+        margin: 0 auto;
+    }
+}

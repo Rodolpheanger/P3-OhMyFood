@@ -20,16 +20,10 @@
     padding: 2.5rem;
     h2 {
         padding: 0 1rem;
-        @extend .default-margin-bottom;
+        @extend %default-margin-bottom;
     }
     p {
-        @extend .default-margin-bottom;
-    }
-    &__btn {
-        @include btn;
-        &:hover {
-            @include btn(hover);
-        }
+        @extend %default-margin-bottom;
     }
 }
 
@@ -48,7 +42,7 @@
             }
         }
         h2 {
-            @extend .default-margin-bottom;
+            @extend %default-margin-bottom;
             @include desktop {
                 text-align: center;
             }
@@ -57,7 +51,7 @@
         &__step {
             display: flex;
             justify-content: flex-end;
-            @extend .default-margin-bottom;
+            @extend %default-margin-bottom;
             @include tablet {
                 @include flex-center;
             }
@@ -107,12 +101,12 @@
     padding: 3rem 1.25rem;
     background-color: $color-bg-main;
     h2 {
-        @extend .default-margin-bottom;
+        @extend %default-margin-bottom;
     }
     &__card {
         display: block;
         position: relative;
-        @extend .default-margin-bottom;
+        @extend %default-margin-bottom;
         @include card-style;
         height: 16rem;
         &:hover {
@@ -147,11 +141,5 @@
             font-weight: 900;
             margin-bottom: .5rem;
         }
-    }
-    
-    .fa-heart {
-        position: absolute;
-        top:30%;
-        right: 1.5rem;
     }
 }
