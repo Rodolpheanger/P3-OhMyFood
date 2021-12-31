@@ -1,0 +1,6 @@
+.fa-heart {
+    @include heart;
+    &:hover {
+        @include heart(hover);
+    }
+}

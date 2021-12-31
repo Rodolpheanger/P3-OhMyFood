@@ -27,3 +27,6 @@ $user-manual__btn-bg: (
     default: $color-bg-main,
     hover: lighten($color-primary, 35%)
     );
+
+$heart-font-weight: (default: 300, hover: 900);
+$heart-color: (default: #000, hover: transparent);

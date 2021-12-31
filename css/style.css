@@ -54,6 +54,21 @@ footer p {
   cursor: pointer;
 }
 
+.fa-heart {
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #000;
+}
+.fa-heart:hover {
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -69,8 +84,9 @@ footer p {
 
 nav {
   position: absolute;
-  top: 1.5rem;
+  top: 1.3rem;
   left: 1.5rem;
+  font-size: 1.2rem;
 }
 
 footer {
@@ -243,11 +259,13 @@ footer a:hover {
   position: relative;
   border-radius: 1em;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
+  z-index: 1;
   height: 16rem;
 }
 .restaurant__card:hover {
   border-radius: 1em;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 .restaurant img {
   object-fit: cover;
@@ -278,7 +296,6 @@ footer a:hover {
   position: absolute;
   top: 30%;
   right: 1.5rem;
-  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
