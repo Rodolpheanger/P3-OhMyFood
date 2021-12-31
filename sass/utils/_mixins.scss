@@ -31,8 +31,8 @@
     cursor: map-get($cursor, $state);
 } 
 
-@mixin user-manual__btn ($state: default){
-    background-color: map-get($user-manual__btn-bg, $state); 
+@mixin user-manual__card ($state: default){
+    background-color: map-get($user-manual__card-bg, $state); 
     padding: 1.25rem 1.75rem;
     box-shadow: map-get($box-shadow, $state);
     border-radius: 1rem;
@@ -49,6 +49,9 @@
     z-index: 2;
     font-size: 1.5rem;
     font-weight: map-get($heart-font-weight, $state);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
     color: map-get($heart-color, $state);
         @if ($state == hover) {
             background-clip: text;

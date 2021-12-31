@@ -1,4 +1,4 @@
-.restaurant__card, .restaurant h2, .user-manual__step, .user-manual h2, .explore p, .explore h2 {
+.restaurant__card, .restaurant h2, .user-manual__step, .user-manual h2, .explore p, .explore h2, .menus__card, .menus hr, .menus h2 {
   margin-bottom: 1.25rem;
 }
 
@@ -29,8 +29,9 @@ strong {
   font-weight: 700;
 }
 
-footer p {
+footer p, .menus h2 {
   font-family: "Shrikhand", sans-serif;
+  font-weight: 300;
 }
 
 .btn {
@@ -58,12 +59,18 @@ footer p {
   z-index: 2;
   font-size: 1.5rem;
   font-weight: 300;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
   color: #000;
 }
 .fa-heart:hover {
   z-index: 2;
   font-size: 1.5rem;
   font-weight: 900;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(45deg, #FF79DA, #9356DC);
@@ -87,6 +94,80 @@ nav {
   top: 1.3rem;
   left: 1.5rem;
   font-size: 1.2rem;
+}
+
+.banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+#menus {
+  background-color: #f6f6f6;
+}
+
+.menus {
+  position: relative;
+  top: -35px;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  padding: 1.25rem;
+}
+.menus h3 {
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.menus hr {
+  background-color: #99E2D0;
+  border: none;
+  height: 0.2rem;
+  width: 2.5rem;
+}
+.menus .menus__btn {
+  padding: 1rem 3rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.menus__card {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 1em;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  height: 4rem;
+  line-height: 1.5rem;
+}
+.menus__card__description {
+  padding: 0.5rem 0.8rem;
+  max-height: 100%;
+}
+.menus__card__description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus__card__description__title {
+  font-size: 1.2rem;
+}
+.menus__card__price {
+  padding: 0.5rem 2.5rem 0.5rem 0.8rem;
+  width: 4.5rem;
+}
+.menus__card__validation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 4rem;
+  width: 4.5rem;
+  background-color: #99E2D0;
+  border-radius: 0 1em 1em 0;
+}
+.menus__card__validation i {
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 footer {
@@ -146,27 +227,6 @@ footer a:hover {
 .explore h2 {
   padding: 0 1rem;
 }
-.explore__btn {
-  background: linear-gradient(-5deg, #9356DC, #FF79DA);
-  border: none;
-  font-weight: 700;
-  color: #fff;
-  border-radius: 3rem;
-  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
-  padding: 1rem 1.4rem;
-  cursor: auto;
-}
-.explore__btn:hover {
-  background: linear-gradient(-5deg, #9b63df, #ff88de);
-  border: none;
-  font-weight: 700;
-  color: #fff;
-  border-radius: 3rem;
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
-  padding: 1rem 1.4rem;
-  cursor: pointer;
-}
-
 .user-manual {
   padding: 3rem 1.25rem;
 }
@@ -203,7 +263,7 @@ footer a:hover {
     width: 30%;
   }
 }
-.user-manual__btn {
+.user-manual__card {
   background-color: #f6f6f6;
   padding: 1.25rem 1.75rem;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
@@ -213,28 +273,28 @@ footer a:hover {
   width: 97%;
 }
 @media screen and (min-width: 450px) and (max-width: 650px) {
-  .user-manual__btn {
+  .user-manual__card {
     width: 98%;
   }
 }
 @media screen and (min-width: 650px) and (max-width: 768px) {
-  .user-manual__btn {
+  .user-manual__card {
     width: 99%;
   }
 }
 @media screen and (min-width: 992px) {
-  .user-manual__btn {
+  .user-manual__card {
     width: 100%;
   }
 }
-.user-manual__btn:hover {
+.user-manual__card:hover {
   background-color: #f2eafb;
   padding: 1.25rem 1.75rem;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   cursor: pointer;
 }
-.user-manual__btn:hover > i {
+.user-manual__card:hover > i {
   color: #9356DC;
 }
 .user-manual__number {
@@ -291,11 +351,6 @@ footer a:hover {
 }
 .restaurant__description h3 {
   margin-bottom: 0.5rem;
-}
-.restaurant .fa-heart {
-  position: absolute;
-  top: 30%;
-  right: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

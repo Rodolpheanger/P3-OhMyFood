@@ -24,12 +24,6 @@
     p {
         @extend %default-margin-bottom;
     }
-    &__btn {
-        @include btn;
-        &:hover {
-            @include btn(hover);
-        }
-    }
 }
 
 // section - site user manual
@@ -64,8 +58,8 @@
                 width: 30%;
             }
         }
-        &__btn {
-            @include user-manual__btn;
+        &__card {
+            @include user-manual__card;
             position: relative;
             width: 97%;
             @media  screen and (min-width: 450px) and (max-width: 650px) {
@@ -79,7 +73,7 @@
             }
 
                 &:hover {
-                    @include user-manual__btn(hover);
+                    @include user-manual__card(hover);
 
                     & > i {
                         color: map-get($color-user-manual__i, hover);
@@ -115,7 +109,7 @@
         @include card-style;
         height: 16rem;
         &:hover {
-            @include card-style (hover);
+            @include card-style(hover);
         }
     }
     img {
@@ -145,11 +139,5 @@
         h3 {
             margin-bottom: .5rem;
         }
-    }
-    
-    .fa-heart {
-        position: absolute;
-        top:30%;
-        right: 1.5rem;
     }
 }
