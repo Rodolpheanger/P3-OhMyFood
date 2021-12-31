@@ -20,10 +20,48 @@
         border: none;
         height: .2rem;
         width: 2.5rem;
+        @extend %default-margin-bottom;
     }
     .menus__btn {
         padding: 1rem 3rem;
         display: block;
         margin: 0 auto;
     }
+}
+
+.menus__card {
+    display: flex;
+    align-items: flex-end;
+    @include card-style;
+    height: 4rem;
+    line-height: 1.5rem;
+    @extend %default-margin-bottom;
+    &__description {
+        padding: .5rem .8rem;
+        max-height: 100%;
+        p {
+            white-space: nowrap;                    // voir pour text-overflow
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &__title {
+            font-size: 1.2rem;
+        }
+    }
+    &__price {
+        padding: .5rem 2.5rem .5rem .8rem;
+        width: 4.5rem;
+    }
+    &__validation {
+        @include flex-center;
+        height: 4rem;
+        width: 4.5rem;
+        background-color: $color-tertiary;
+        border-radius: 0 $border-radius $border-radius 0;
+        i {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+
 }

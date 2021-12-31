@@ -59,8 +59,8 @@
                 width: 30%;
             }
         }
-        &__btn {
-            @include user-manual__btn;
+        &__card {
+            @include user-manual__card;
             position: relative;
             width: 97%;
             @media  screen and (min-width: 450px) and (max-width: 650px) {
@@ -74,7 +74,7 @@
             }
 
                 &:hover {
-                    @include user-manual__btn(hover);
+                    @include user-manual__card(hover);
 
                     & > i {
                         color: map-get($color-user-manual__i, hover);
@@ -110,7 +110,7 @@
         @include card-style;
         height: 16rem;
         &:hover {
-            @include card-style (hover);
+            @include card-style(hover);
         }
     }
     img {
