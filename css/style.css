@@ -62,25 +62,37 @@ footer p, .menus h2 {
 
 .fa-heart {
   z-index: 2;
-  font-size: 1.5rem;
-  font-weight: 300;
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  color: #000;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.1rem #000;
+  background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
+  background-size: 100% 300%;
+  transition: all 0.5s cubic-bezier(0.49, 0, 0.34, 1);
   cursor: auto;
 }
 .fa-heart:hover {
   z-index: 2;
-  font-size: 1.5rem;
-  font-weight: 900;
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: transparent;
-  cursor: pointer;
   background-clip: text;
-  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.1rem #000;
+  background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
+  background-size: 100% 300%;
+  transition: all 0.5s cubic-bezier(0.49, 0, 0.34, 1);
+  cursor: pointer;
+  background-position: 0% -50%;
+  -webkit-text-stroke: transparent;
 }
 
 .header {
@@ -154,8 +166,9 @@ nav {
 
 .menus__card {
   position: relative;
-  border-radius: 1em;
+  border-radius: 1rem;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
+  background-color: #fff;
   z-index: 1;
   height: 4rem;
   line-height: 1.5rem;
@@ -211,7 +224,7 @@ nav {
   right: 0;
   height: 4rem;
   background-color: #99E2D0;
-  border-radius: 0 1em 1em 0;
+  border-radius: 0 1rem 1rem 0;
   width: 4.5rem;
   transform: translateX(4.5rem);
   transition: transform 0.5s cubic-bezier(0.49, 0, 0.34, 1);
@@ -401,8 +414,9 @@ footer a:hover {
 .restaurant__card {
   display: block;
   position: relative;
-  border-radius: 1em;
+  border-radius: 1rem;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
+  background-color: #fff;
   z-index: 1;
   height: 16rem;
 }
@@ -413,13 +427,14 @@ footer a:hover {
   }
 }
 .restaurant__card:hover {
-  border-radius: 1em;
+  border-radius: 1rem;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
+  background-color: #fff;
   z-index: 1;
 }
 .restaurant img {
   object-fit: cover;
-  border-radius: 1em 1em 0 0;
+  border-radius: 1rem 1rem 0 0;
   width: 100%;
   height: 70%;
   z-index: 1;

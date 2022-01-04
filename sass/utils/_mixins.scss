@@ -5,6 +5,8 @@
     flex-direction: map-get($flex-direction, $direction);
 }
 
+// mixins responsive
+
 @mixin tablet {
     @media screen and (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
         @content;
@@ -20,10 +22,16 @@
         @content;
     }
 }
+
+// mixin apparence du curseur
+
 @mixin cursor ($state: default) {
     cursor: map-get($cursor, $state);  
 }
-@mixin btn ($state: default){
+
+// style des boutons principaux sur index et pages restaurants
+
+@mixin btn ($state: default) {
     background-image: $btn-bg;
     opacity: map-get($btn-opacity, $state);
     border: none;
@@ -35,6 +43,8 @@
     padding: 1rem 1.4rem;
     @include cursor($state);
 } 
+
+// style des cards section user-manual sur index
 
 @mixin user-manual__card ($state: default){
     background-color: map-get($user-manual__card-bg, $state); 
@@ -50,33 +60,48 @@
     }
 }
 
+//style de base des cards restaurant sur index et des cards menus sur pages des restaurants
+
 @mixin card-style ($state: default) {
     border-radius: $border-radius;
     box-shadow: map-get($box-shadow, $state);
+    background-color: #fff;
     z-index: 1;
 }
 
+// style et animation des icones heart sur index (cards restaurants) et pages des restaurants (cards menus)
+
 @mixin heart ($state: default) {
     z-index: 2;
-    font-size: 1.5rem;
-    font-weight: map-get($heart-font-weight, $state);
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    color: map-get($heart-color, $state);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: transparent;                                  // mise en transparence de la couleur du texte icone heart pour afficher son background
+    background-clip: text;                               // propriété pour afficher le background du texte icone heart
+    -webkit-background-clip: text;                       // préfix pour chrome de la propriété background-clip
+    -webkit-text-stroke: .1rem #000;                   // contour noir icone heart
+    background-image: $heart-bg-image;                   // dégradé linéaire transparent sur 49% de sa hauteur
+    background-size: 100% 300%;                          // agrandissement taille du background 300% sur axe Y pour ne laisser apparaitre que la zone transparente
+    @include transition (all);
     @include cursor($state);
         @if ($state == hover) {
-            background-clip: text;
-            background-image: linear-gradient(45deg, $color-secondary, $color-primary);
+            background-position: 0% -50%;                // descente du background de 50% (axe Y) au survol pour appartion progressive du dégradé
+            -webkit-text-stroke: transparent;
         }
         @else {}
 }
+
+// mixin pour transition animations icones heart et slide box price et validation des cards menus sur pages restaurants
 
 @mixin transition ($type: transform) {
     transition: map-get($transition-type, $type) $transition-duration $transition-timing-function;
 }
 
+// mixin pour slide box price et validation des cards menus sur pages restaurants
+
 @mixin card__boxes--slide {
-    width: $slide-box-size;
-    transform: translateX($slide-box-size);
+    width: $slide-box-width;
+    transform: translateX($slide-box-width);
 }
