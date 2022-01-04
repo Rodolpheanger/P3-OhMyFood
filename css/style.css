@@ -2,12 +2,6 @@
   margin-bottom: 1.25rem;
 }
 
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
 body {
   max-width: 1920px;
   margin: auto;
@@ -111,7 +105,7 @@ nav {
   height: 250px;
 }
 
-#menus {
+.main__menus--bg-color {
   background-color: #f6f6f6;
 }
 
@@ -122,6 +116,18 @@ nav {
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
   padding: 1.25rem;
+}
+@media screen and (min-width: 992px) {
+  .menus .menus__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .menus .menus__container article {
+    width: 32%;
+  }
 }
 .menus h2, .menus article {
   margin-bottom: 2.5rem;

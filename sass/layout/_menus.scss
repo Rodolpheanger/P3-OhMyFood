@@ -1,4 +1,4 @@
-#menus {
+.main__menus--bg-color {
     background-color: $color-bg-main;
 }
 .menus {
@@ -8,6 +8,18 @@
     border-radius: 2rem 2rem 0 0;
     background-color: $color-bg-main;
     padding: 1.25rem;
+    .menus__container{
+        @include desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25rem 0;
+        article {
+            @include desktop{
+                width: 32%;
+            } 
+        }
+    }
+}
     h2, article {
         margin-bottom: 2.5rem;
     }
