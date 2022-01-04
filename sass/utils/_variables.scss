@@ -18,11 +18,8 @@ $box-shadow: (
     hover: 0 .2rem 1rem rgba(0, 0, 0, 0.7)
     );
 
-$btn-bg: (
-    default: linear-gradient(-5deg, $color-primary, $color-secondary),
-    hover: linear-gradient(-5deg, lighten($color-primary, 3%), lighten($color-secondary, 3%))
-    );
-
+$btn-bg: linear-gradient(-5deg, $color-primary, $color-secondary);
+$btn-opacity: (default: 1, hover: 0.9);
 $user-manual__card-bg: (
     default: $color-bg-main,
     hover: lighten($color-primary, 35%)
@@ -34,6 +31,6 @@ $heart-color: (default: #000, hover: transparent);
 $menu__card-height: 4rem;
 $slide-box-size: 4.5rem;
 
-$transition-type: (transform: transform, width: width);
+$transition-type: (transform: transform, width: width, opacity: opacity);
 $transition-duration: 0.5s;
 $transition-timing-function: cubic-bezier(.49,0,.34,1);

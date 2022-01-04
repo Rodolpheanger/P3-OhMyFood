@@ -48,6 +48,9 @@
     height: $menu__card-height;
     line-height: 1.5rem;
     overflow: hidden;
+    &:hover {
+        @include cursor(hover);
+    }
     &:hover > &__description {
         width: (75% - 15%);
     } 
