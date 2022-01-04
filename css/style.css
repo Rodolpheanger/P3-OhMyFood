@@ -1,18 +1,10 @@
-.restaurant__card, .restaurant h2, .user-manual__step, .user-manual h2, .explore p, .explore h2, .menus__card, .menus hr, .menus h2 {
+.restaurant__card, .restaurant h2, .user-manual__step, .user-manual h2, .explore p, .explore h2, .menus__card, .menus hr {
   margin-bottom: 1.25rem;
 }
 
 body {
   max-width: 1920px;
   margin: auto;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
@@ -21,11 +13,20 @@ h2 {
   font-size: 1.5rem;
 }
 
-h2, h3 {
-  font-weight: 900;
+h2, h3, strong {
+  font-weight: 700;
 }
 
-strong {
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menus h2 {
+  font-size: 1.7rem;
+}
+
+h2, h3, strong {
   font-weight: 700;
 }
 
@@ -113,6 +114,9 @@ nav {
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
   padding: 1.25rem;
+}
+.menus h2, .menus article {
+  margin-bottom: 2.5rem;
 }
 .menus h3 {
   text-transform: uppercase;
