@@ -59,3 +59,12 @@
         }
         @else {}
 }
+
+@mixin transition ($type: transform) {
+    transition: map-get($transition-type, $type) $transition-duration $transition-timing-function;
+}
+
+@mixin card__boxes--slide {
+    width: $slide-box-size;
+    transform: translateX($slide-box-size);
+}

@@ -30,3 +30,8 @@ $user-manual__card-bg: (
 
 $heart-font-weight: (default: 300, hover: 900);
 $heart-color: (default: #000, hover: transparent);
+
+$slide-box-size: 4.5rem;
+$transition-type: (transform: transform, width: width);
+$transition-duration: 0.5s;
+$transition-timing-function: cubic-bezier(.49,0,.34,1);
