@@ -23,6 +23,7 @@
 @mixin btn ($state: default){
     background: map-get($btn-bg, $state);
     border: none;
+    font-size: .8rem;
     font-weight: 700;
     color: #fff;
     border-radius: 3rem;
@@ -37,6 +38,12 @@
     box-shadow: map-get($box-shadow, $state);
     border-radius: 1rem;
     cursor: map-get($cursor, $state);
+    @include tablet-and-desktop {
+        max-width: 20rem;
+    }
+    @include desktop {
+        padding: 1.25rem .7rem;
+    }
 }
 
 @mixin card-style ($state: default) {

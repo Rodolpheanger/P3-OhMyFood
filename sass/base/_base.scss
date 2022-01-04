@@ -1,8 +1,15 @@
+html {
+    @include desktop {
+        font-size: 1.2rem;
+    }
+}
+
 body {
     max-width: 1920px;
     margin: auto;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+    
 }
 
 h2 {

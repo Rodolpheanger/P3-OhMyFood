@@ -2,6 +2,12 @@
   margin-bottom: 1.25rem;
 }
 
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
 body {
   max-width: 1920px;
   margin: auto;
@@ -38,6 +44,7 @@ footer p, .menus h2 {
 .btn {
   background: linear-gradient(-5deg, #9356DC, #FF79DA);
   border: none;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #fff;
   border-radius: 3rem;
@@ -48,6 +55,7 @@ footer p, .menus h2 {
 .btn:hover {
   background: linear-gradient(-5deg, #9b63df, #ff88de);
   border: none;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #fff;
   border-radius: 3rem;
@@ -293,6 +301,8 @@ footer a:hover {
 @media screen and (min-width: 992px) {
   .user-manual__step {
     width: 30%;
+    justify-content: center;
+    text-align: center;
   }
 }
 .user-manual__card {
@@ -304,6 +314,16 @@ footer a:hover {
   position: relative;
   width: 97%;
 }
+@media screen and (min-width: 768px) {
+  .user-manual__card {
+    max-width: 20rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .user-manual__card {
+    padding: 1.25rem 0.7rem;
+  }
+}
 @media screen and (min-width: 450px) and (max-width: 650px) {
   .user-manual__card {
     width: 98%;
@@ -314,17 +334,22 @@ footer a:hover {
     width: 99%;
   }
 }
-@media screen and (min-width: 992px) {
-  .user-manual__card {
-    width: 100%;
-  }
-}
 .user-manual__card:hover {
   background-color: #f2eafb;
   padding: 1.25rem 1.75rem;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .user-manual__card:hover {
+    max-width: 20rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .user-manual__card:hover {
+    padding: 1.25rem 0.7rem;
+  }
 }
 .user-manual__card:hover > i {
   color: #9356DC;
@@ -346,6 +371,20 @@ footer a:hover {
   padding: 3rem 1.25rem;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 992px) {
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant h2 {
+    width: 95%;
+    align-self: flex-start;
+  }
+}
 .restaurant__card {
   display: block;
   position: relative;
@@ -353,6 +392,12 @@ footer a:hover {
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
   z-index: 1;
   height: 16rem;
+}
+@media screen and (min-width: 992px) {
+  .restaurant__card {
+    width: 45%;
+    margin-bottom: 3rem;
+  }
 }
 .restaurant__card:hover {
   border-radius: 1em;
