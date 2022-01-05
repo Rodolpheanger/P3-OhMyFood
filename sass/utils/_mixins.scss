@@ -42,6 +42,7 @@
     box-shadow: map-get($box-shadow, $state);
     padding: 1rem 1.4rem;
     @include cursor($state);
+    @include transition (all);
 } 
 
 // style des cards section user-manual sur index
@@ -52,6 +53,7 @@
     box-shadow: map-get($box-shadow, $state);
     border-radius: 1rem;
     @include cursor($state);
+    @include transition (all);
     @include tablet-and-desktop {
         max-width: 20rem;
     }
@@ -67,6 +69,7 @@
     box-shadow: map-get($box-shadow, $state);
     background-color: #fff;
     z-index: 1;
+    @include transition (all);
 }
 
 // style et animation des icones heart sur index (cards restaurants) et pages des restaurants (cards menus)
@@ -79,8 +82,8 @@
     font-size: 1.5rem;
     font-weight: 900;
     color: transparent;                                  // mise en transparence de la couleur du texte icone heart pour afficher son background
-    background-clip: text;                               // propriété pour afficher le background du texte icone heart
-    -webkit-background-clip: text;                       // préfix pour chrome de la propriété background-clip
+    -webkit-background-clip: text;
+            background-clip: text;                       // propriété pour afficher le background du texte icone heart
     -webkit-text-stroke: .1rem #000;                   // contour noir icone heart
     background-image: $heart-bg-image;                   // dégradé linéaire transparent sur 49% de sa hauteur
     background-size: 100% 300%;                          // agrandissement taille du background 300% sur axe Y pour ne laisser apparaitre que la zone transparente
@@ -111,7 +114,8 @@
 @mixin menus--fadein {
     @for $i from 1 through 14 {
         .menus--fadein-#{$i} {
-            animation: menus--fadein $menus--fadein-animation-duration $menus--fadein-animation-duration*$i*0.5 $menus--fadein-animation-timing-function backwards;
+            -webkit-animation: menus--fadein $menus--fadein-animation-duration $menus--fadein-animation-duration*$i*0.5 $menus--fadein-animation-timing-function backwards;
+                    animation: menus--fadein $menus--fadein-animation-duration $menus--fadein-animation-duration*$i*0.5 $menus--fadein-animation-timing-function backwards;
         }
     }
 }

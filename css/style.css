@@ -46,6 +46,7 @@ footer p, .menus h2 {
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
   padding: 1rem 1.4rem;
   cursor: auto;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 .btn:hover {
   background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
@@ -58,6 +59,7 @@ footer p, .menus h2 {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
   padding: 1rem 1.4rem;
   cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 
 .fa-heart {
@@ -68,8 +70,8 @@ footer p, .menus h2 {
   font-size: 1.5rem;
   font-weight: 900;
   color: transparent;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-stroke: 0.1rem #000;
   background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
   background-size: 100% 300%;
@@ -84,8 +86,8 @@ footer p, .menus h2 {
   font-size: 1.5rem;
   font-weight: 900;
   color: transparent;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-stroke: 0.1rem #000;
   background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
   background-size: 100% 300%;
@@ -225,6 +227,7 @@ footer a:hover {
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
   border-radius: 1rem;
   cursor: auto;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
   position: relative;
   width: 97%;
 }
@@ -254,6 +257,7 @@ footer a:hover {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 @media screen and (min-width: 768px) {
   .user-manual__card:hover {
@@ -306,6 +310,7 @@ footer a:hover {
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
   background-color: #fff;
   z-index: 1;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
   height: 16rem;
 }
 @media screen and (min-width: 992px) {
@@ -319,6 +324,7 @@ footer a:hover {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
   background-color: #fff;
   z-index: 1;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 .restaurant img {
   object-fit: cover;
@@ -346,6 +352,16 @@ footer a:hover {
   margin-bottom: 0.5rem;
 }
 
+@-webkit-keyframes menus--fadein {
+  0% {
+    transform: translateY(0.5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes menus--fadein {
   0% {
     transform: translateY(0.5rem);
@@ -369,45 +385,59 @@ footer a:hover {
   padding: 1.25rem;
 }
 .menus .menus--fadein-1 {
+  -webkit-animation: menus--fadein 0.8s 0.4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 0.4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-2 {
+  -webkit-animation: menus--fadein 0.8s 0.8s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 0.8s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-3 {
+  -webkit-animation: menus--fadein 0.8s 1.2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 1.2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-4 {
+  -webkit-animation: menus--fadein 0.8s 1.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 1.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-5 {
+  -webkit-animation: menus--fadein 0.8s 2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-6 {
+  -webkit-animation: menus--fadein 0.8s 2.4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 2.4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-7 {
+  -webkit-animation: menus--fadein 0.8s 2.8s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 2.8s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-8 {
+  -webkit-animation: menus--fadein 0.8s 3.2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 3.2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-9 {
+  -webkit-animation: menus--fadein 0.8s 3.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 3.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-10 {
+  -webkit-animation: menus--fadein 0.8s 4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-11 {
+  -webkit-animation: menus--fadein 0.8s 4.4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 4.4s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-12 {
+  -webkit-animation: menus--fadein 0.8s 4.8s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 4.8s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-13 {
+  -webkit-animation: menus--fadein 0.8s 5.2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 5.2s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 .menus .menus--fadein-14 {
+  -webkit-animation: menus--fadein 0.8s 5.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 5.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
 }
 @media screen and (min-width: 992px) {
@@ -447,12 +477,18 @@ footer a:hover {
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
   background-color: #fff;
   z-index: 1;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
   height: 4rem;
   line-height: 1.5rem;
   overflow: hidden;
 }
 .menus__card:hover {
   cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 .menus__card:hover > .menus__card__description {
   width: 60%;
@@ -482,8 +518,8 @@ footer a:hover {
   position: absolute;
   right: 4.5rem;
   top: 0;
-  width: 4.5rem;
-  transform: translateX(4.5rem);
+  width: 4.6rem;
+  transform: translateX(4.6rem);
   transition: transform 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 .menus__card__price p {
@@ -498,12 +534,12 @@ footer a:hover {
   flex-direction: row;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1px;
   height: 4rem;
   background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
-  width: 4.5rem;
-  transform: translateX(4.5rem);
+  width: 4.6rem;
+  transform: translateX(4.6rem);
   transition: transform 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 .menus__card__validation i {

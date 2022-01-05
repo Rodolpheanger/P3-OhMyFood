@@ -1,3 +1,14 @@
+@-webkit-keyframes menus--fadein {
+    0% {
+        transform: translateY(0.5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes menus--fadein {
     0% {
         transform: translateY(0.5rem);
@@ -62,6 +73,7 @@
     overflow: hidden;
     &:hover {
         @include cursor(hover);
+        @include card-style(hover);
     }
     &:hover > &__description {
         width: (75% - 15%);
@@ -103,7 +115,7 @@
         @include flex-center;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -1px;
         height: $menu__card-height;
         background-color: $color-tertiary;
         border-radius: 0 $border-radius $border-radius 0;
