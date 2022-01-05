@@ -105,3 +105,13 @@
     width: $slide-box-width;
     transform: translateX($slide-box-width);
 }
+
+// mixin pour animation fadein des menus sur pages restaurant
+
+@mixin menus--fadein {
+    @for $i from 1 through 14 {
+        .menus--fadein-#{$i} {
+            animation: menus--fadein $menus--fadein-animation-duration $menus--fadein-animation-duration*$i*0.5 $menus--fadein-animation-timing-function backwards;
+        }
+    }
+}

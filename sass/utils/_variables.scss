@@ -40,4 +40,9 @@ $slide-box-width: 4.5rem;
 
 $transition-type: (transform: transform, width: width, all: all);
 $transition-duration: 0.5s;
-$transition-timing-function: cubic-bezier(.49,0,.34,1);
+$transition-timing-function: cubic-bezier(.5,0,.35,1);
+
+// propriété animation menus--fadein des menus sur pages restaurants
+
+$menus--fadein-animation-duration: 0.8s;
+$menus--fadein-animation-timing-function: cubic-bezier(.5,0,.6,1);
