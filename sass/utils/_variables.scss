@@ -31,6 +31,11 @@ $breakpoints: (tablet-min: 768px, tablet-max: 991px, desktop: 992px);
 $border-radius: 1rem;
 $btn-opacity: (default: 1, hover: 0.9);
 
+// propriétés du loader
+
+$loader-duration: 3s;
+
+
 // 
 
 $menu__card-height: 4rem;

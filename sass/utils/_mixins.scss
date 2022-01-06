@@ -75,7 +75,7 @@
 // style et animation des icones heart sur index (cards restaurants) et pages des restaurants (cards menus)
 
 @mixin heart ($state: default) {
-    z-index: 2;
+    z-index: 10;
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
