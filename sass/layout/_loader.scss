@@ -17,13 +17,13 @@
 @-webkit-keyframes loader {
     
     0%, 99.99% {
+        z-index: 100;
         opacity: 1;
     }
-
     100% {
+        z-index: -100;
         opacity: 0;
     }
-
 }
 
 @keyframes loader {
@@ -32,12 +32,10 @@
         z-index: 100;
         opacity: 1;
     }
-
     100% {
         z-index: -100;
         opacity: 0;
     }
-
 }
 
 .loader__text-slide-show {
@@ -49,20 +47,20 @@
         top: 40%;
         }
     &__pretext {
-    font-family: "Shrikhand";
-    font-size: 50px;
-    margin-bottom: 50px;
-    @include tablet-and-desktop {
-            margin-right: 40px;
-            margin-bottom: 0;
-        }
+        font-family: "Shrikhand";
+        font-size: 50px;
+        margin-bottom: 50px;
+        @include tablet-and-desktop {
+                margin-right: 40px;
+                margin-bottom: 0;
+            }
     }
     &__container {
         overflow: hidden;
         height: 40px;
     }
     &__elements {
-        font-size: 33px;
+        font-size: 34px;
         line-height: 40px;
         font-weight: 900;
         font-style: italic;
@@ -77,11 +75,9 @@
     0% {
         transform: translatey(0);
     }
-
     50%{
         transform: translateY(-40px);
     }
-
     100%{
         transform: translateY(-80px);
     }
@@ -92,11 +88,9 @@
     0% {
         transform: translateY(0);
     }
-
     50%{
         transform: translateY(-40px);
     }
-
     100%{
         transform: translateY(-80px);
     }
@@ -111,7 +105,7 @@
         }
     &__container {
         width: 350px;
-        @for $i from 1 through 10 {
+        @for $i from 1 through 10 {                                 // boucle pour décaler le delay de chaque icone ustensil
             i:nth-child(#{$i}) {
                 -webkit-animation-delay: $loader-duration/30*$i;
                         animation-delay: $loader-duration/30*$i;
@@ -137,31 +131,24 @@
         text-shadow: 0 0 10px $color-secondary;
         transform: translateY(10px);       
     }
-
     25% {
         transform: translateY(-10px);
         text-shadow: 0 0 0 $color-secondary;
 
     }
-
     50% {
         opacity: 1;
         transform: translateY(10px);
         text-shadow: 0 0 10px $color-secondary;
     }
-
     75% {
         transform: translateY(-10px);
         text-shadow: 0 0 0 $color-secondary;
-
     }
-
-
     100% {
         opacity: 0;
         text-shadow: 0 0 10px $color-secondary; 
         transform: translateY(10px);       
-    
     }
 }
 
@@ -172,30 +159,23 @@
         text-shadow: 0 0 10px $color-secondary;
         transform: translateY(10px);       
     }
-
     25% {
         transform: translateY(-10px);
         text-shadow: 0 0 0 $color-secondary;
-
     }
-
     50% {
         opacity: 1;
         transform: translateY(10px);
         text-shadow: 0 0 10px $color-secondary;
     }
-
     75% {
         transform: translateY(-10px);
         text-shadow: 0 0 0 $color-secondary;
 
     }
-
-
     100% {
         opacity: 0;
-        text-shadow: 0 0 10px $color-secondary; 
-        transform: translateY(10px);       
-    
+        text-shadow: 0 0 10px $color-secondary;
+        transform: translateY(10px);
     }
 }

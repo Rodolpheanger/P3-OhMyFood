@@ -35,7 +35,7 @@
     background-image: $btn-bg;
     opacity: map-get($btn-opacity, $state);
     border: none;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     color: #fff;
     border-radius: 48px;
@@ -88,19 +88,19 @@
     @include transition (all);
     @include cursor($state);
         @if ($state == hover) or ($state == active) {
-            background-position: 0% -50%;                // descente du background de 50% (axe Y) au survol pour appartion progressive du dégradé
+            background-position: 0% -50%;                // descente du background de 50% sur axe Y pour appartion progressive du dégradé par le haut
             -webkit-text-stroke: transparent;
         }
         @else {}
 }
 
-// mixin pour transition animations icones heart et slide box price et validation des cards menus sur pages restaurants
+// mixin pour propriétés des transitions pour les animations icones heart et slide box price + validation des cards menus sur pages restaurants
 
 @mixin transition ($type: transform) {
     transition: map-get($transition-type, $type) $transition-duration $transition-timing-function;
 }
 
-// mixin pour slide box price et validation des cards menus sur pages restaurants
+// mixin pour dimensions desb slides boxes (classes price et validation) des cards menus sur pages restaurants
 
 @mixin card__boxes--slide {
     width: $slide-box-width;
