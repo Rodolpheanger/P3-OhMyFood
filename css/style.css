@@ -92,6 +92,21 @@ footer p, .menus h2 {
   background-position: 0% -50%;
   -webkit-text-stroke: transparent;
 }
+.fa-heart:active {
+  z-index: 10;
+  position: absolute;
+  font-size: 24px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1.5px #000;
+  background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
+  background-size: 100% 300%;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+  background-position: 0% -50%;
+  -webkit-text-stroke: transparent;
+}
 
 .loader {
   display: flex;
@@ -707,7 +722,7 @@ footer a:hover {
   line-height: 24px;
   overflow: hidden;
 }
-.menus__card:hover {
+.menus__card:hover, .menus__card:active {
   cursor: pointer;
   border-radius: 16px;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
@@ -715,13 +730,13 @@ footer a:hover {
   z-index: 1;
   transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
-.menus__card:hover > .menus__card__description {
+.menus__card:hover > .menus__card__description, .menus__card:active > .menus__card__description {
   width: 60%;
 }
-.menus__card:hover > .menus__card__price, .menus__card:hover > .menus__card__validation {
+.menus__card:hover > .menus__card__price, .menus__card:active > .menus__card__price, .menus__card:hover > .menus__card__validation, .menus__card:active > .menus__card__validation {
   transform: translateX(0);
 }
-.menus__card:hover > .menus__card__validation i {
+.menus__card:hover > .menus__card__validation i, .menus__card:active > .menus__card__validation i {
   transform: rotate(360deg);
 }
 .menus__card__description {

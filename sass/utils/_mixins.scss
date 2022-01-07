@@ -87,7 +87,7 @@
     background-size: 100% 300%;                          // agrandissement taille du background 300% sur axe Y pour ne laisser apparaitre que la zone transparente
     @include transition (all);
     @include cursor($state);
-        @if ($state == hover) {
+        @if ($state == hover) or ($state == active) {
             background-position: 0% -50%;                // descente du background de 50% (axe Y) au survol pour appartion progressive du dégradé
             -webkit-text-stroke: transparent;
         }
