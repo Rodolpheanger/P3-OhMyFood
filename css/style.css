@@ -1,4 +1,4 @@
-.menus__card, .menus hr, .restaurant__card, .restaurant h2, .user-manual__step, .user-manual h2, .explore p, .explore h2 {
+.menus__card, .menus hr, .restaurant__card, .restaurant h2, .user-manual__step, .explore p, .explore h2 {
   margin-bottom: 20px;
 }
 
@@ -23,7 +23,7 @@ a {
 }
 
 .menus h2 {
-  font-size: 27px;
+  font-size: 26px;
 }
 
 h2, h3, strong {
@@ -39,7 +39,7 @@ footer p, .menus h2 {
   background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
   opacity: 1;
   border: none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
   border-radius: 48px;
@@ -52,7 +52,7 @@ footer p, .menus h2 {
   background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
   opacity: 0.9;
   border: none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
   border-radius: 48px;
@@ -132,9 +132,11 @@ footer p, .menus h2 {
 
 @-webkit-keyframes loader {
   0%, 99.99% {
+    z-index: 100;
     opacity: 1;
   }
   100% {
+    z-index: -100;
     opacity: 0;
   }
 }
@@ -181,7 +183,7 @@ footer p, .menus h2 {
   height: 40px;
 }
 .loader__text-slide-show__elements {
-  font-size: 33px;
+  font-size: 34px;
   line-height: 40px;
   font-weight: 900;
   font-style: italic;
@@ -345,8 +347,8 @@ footer p, .menus h2 {
 nav {
   position: absolute;
   top: 20px;
-  left: 24px;
-  font-size: 19px;
+  left: 25px;
+  font-size: 20px;
 }
 nav i:hover {
   color: #9356DC;
@@ -367,7 +369,7 @@ footer {
   footer p {
     text-align: center;
     margin: 16px 0;
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 footer ul {
@@ -429,6 +431,9 @@ footer a:hover {
     justify-content: space-evenly;
   }
 }
+.user-manual h2 {
+  margin-bottom: 40px;
+}
 @media screen and (min-width: 992px) {
   .user-manual h2 {
     text-align: center;
@@ -471,16 +476,6 @@ footer a:hover {
 @media screen and (min-width: 992px) {
   .user-manual__card {
     padding: 20px 12px;
-  }
-}
-@media screen and (min-width: 450px) and (max-width: 650px) {
-  .user-manual__card {
-    width: 98%;
-  }
-}
-@media screen and (min-width: 650px) and (max-width: 768px) {
-  .user-manual__card {
-    width: 99%;
   }
 }
 .user-manual__card:hover {
@@ -572,8 +567,8 @@ footer a:hover {
 }
 .restaurant__notification-new {
   display: block;
-  padding: 6.5px 13px;
-  font-size: 13px;
+  padding: 8px 13px;
+  font-size: 14px;
   background-color: #99E2D0;
   color: #278870;
   position: absolute;
@@ -686,8 +681,6 @@ footer a:hover {
     justify-content: space-between;
     padding: 20px 0;
   }
-}
-@media screen and (min-width: 992px) and (min-width: 992px) {
   .menus .menus__container article {
     width: 32%;
   }
@@ -750,7 +743,7 @@ footer a:hover {
   white-space: nowrap;
 }
 .menus__card__description__title {
-  font-size: 19px;
+  font-size: 18px;
 }
 .menus__card__price {
   padding: 8px 40px 8px 0;

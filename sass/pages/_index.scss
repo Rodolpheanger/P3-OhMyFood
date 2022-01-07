@@ -30,7 +30,6 @@
 
 .user-manual {
     padding: 48px 20px;
-
     @include tablet {
         text-align: center;
     }
@@ -41,11 +40,10 @@
         }
     }
     h2 {
-        @extend %default-margin-bottom;
+        margin-bottom: 40px;
         @include desktop {
             text-align: center;
         }
-    
     }
     &__step {
         display: flex;
@@ -64,12 +62,6 @@
         @include user-manual__card;
         position: relative;
         width: 97%;
-        @media  screen and (min-width: 450px) and (max-width: 650px) {
-            width: 98%;    
-        }
-        @media  screen and (min-width: 650px) and (max-width: 768px) {
-            width: 99%;    
-        }
         &:hover {
             @include user-manual__card(hover);
             & > i {
@@ -135,20 +127,17 @@
         height: 70%;
         z-index: 1;
     }
-
     &__notification-new {
         display: block;
-        padding: 6.5px 13px;
-        font-size: 13px;
+        padding: 8px 13px;
+        font-size: 14px;
         background-color: $color-tertiary;
         color: darken($color-tertiary, 40%);
         position: absolute;
         top: 16px;
         right: 16px;
         z-index: 2;
-
     }
-
     &__description {
         padding: 13px;
         h3 {
