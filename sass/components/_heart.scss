@@ -3,4 +3,7 @@
     &:hover {
         @include heart(hover);
     }
+    &:active {
+        @include heart(active)
+    }
 }

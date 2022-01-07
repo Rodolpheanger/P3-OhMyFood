@@ -76,17 +76,17 @@
     height: $menu__card-height;
     line-height: 24px;
     overflow: hidden;
-    &:hover {
+    &:hover, &:active {
         @include cursor(hover);
         @include card-style(hover);
     }
-    &:hover > &__description {
+    &:hover > &__description, &:active > &__description {
         width: (75% - 15%);
     } 
-    &:hover > &__price, &:hover > &__validation {
+    &:hover > &__price, &:active > &__price, &:hover > &__validation, &:active > &__validation {
         transform: translateX(0);
     }
-    &:hover > &__validation i {
+    &:hover > &__validation i, &:active > &__validation i {
         transform: rotate(360deg);
     }
     &__description {
