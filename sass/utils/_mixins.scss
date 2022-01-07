@@ -100,7 +100,7 @@
     transition: map-get($transition-type, $type) $transition-duration $transition-timing-function;
 }
 
-// mixin pour dimensions desb slides boxes (classes price et validation) des cards menus sur pages restaurants
+// mixin pour dimensions des slides boxes (classes price et validation) des cards menus sur pages restaurants
 
 @mixin card__boxes--slide {
     width: $slide-box-width;
