@@ -1,24 +1,24 @@
 footer {
     background-color: $color-bg-footer;
-    padding: 1.25rem;
+    padding: 20px;
     color: #fff;
     p {
         @include tablet-and-desktop {
             text-align: center;
-            margin: 1rem 0;
-            font-size: 1.2rem;
+            margin: 16px 0;
+            font-size: 19px;
         }
     }
     ul {
-        padding: 1.25rem 0;
-        line-height: 1.5rem;
+        padding: 20px 0;
+        line-height: 24px;
         @include tablet-and-desktop {
             display: flex;
             justify-content: space-around;
         }
     }
     i {
-        padding-right: .8rem;
+        padding-right: 13px;
     }
     a {
         color: #fff;

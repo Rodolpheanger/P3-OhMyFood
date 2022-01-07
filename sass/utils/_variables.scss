@@ -19,8 +19,8 @@ $color-bg-footer: #353535;
 
 $color-user-manual__i: (default: #7E7E7E, hover: $color-primary);
 $box-shadow: (
-    default: 0 .2rem .6rem rgba(0, 0, 0, 0.4),
-    hover: 0 .2rem 1rem rgba(0, 0, 0, 0.7)
+    default: 0 3px 10px rgba(0, 0, 0, 0.4),
+    hover: 0 3px 16px rgba(0, 0, 0, 0.7)
     );
     
 // divers
@@ -28,7 +28,7 @@ $box-shadow: (
 $cursor: (default: auto, hover: pointer);
 $flex-direction: (row: row, column: column);
 $breakpoints: (tablet-min: 768px, tablet-max: 991px, desktop: 992px);
-$border-radius: 1rem;
+$border-radius: 16px;
 $btn-opacity: (default: 1, hover: 0.9);
 
 // propriétés du loader
@@ -38,8 +38,8 @@ $loader-duration: 3s;
 
 // 
 
-$menu__card-height: 4rem;
-$slide-box-width: 4.6rem;
+$menu__card-height: 64px;
+$slide-box-width: 74px;
 
 // propriétés des transitions
 
