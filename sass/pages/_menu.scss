@@ -31,6 +31,10 @@
     background-color: $color-bg-main;
     padding: 1.25rem;
     @include menus--fadein;
+    i {
+        top: 1.5rem;
+        right: 1.5rem;    
+    }
     .menus__container{
         @include desktop {
         display: flex;
@@ -46,6 +50,7 @@
     h2, article {
         margin-bottom: 2.5rem;
     }
+
     h3 {
         text-transform: uppercase;
         margin-bottom: .2rem;

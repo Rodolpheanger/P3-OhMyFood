@@ -65,8 +65,6 @@ footer p, .menus h2 {
 .fa-heart {
   z-index: 10;
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
   font-size: 1.5rem;
   font-weight: 900;
   color: transparent;
@@ -81,8 +79,6 @@ footer p, .menus h2 {
 .fa-heart:hover {
   z-index: 10;
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
   font-size: 1.5rem;
   font-weight: 900;
   color: transparent;
@@ -116,6 +112,7 @@ footer p, .menus h2 {
   flex-direction: column;
   width: 500px;
   height: 500px;
+  text-align: center;
 }
 
 @-webkit-keyframes loader {
@@ -140,14 +137,29 @@ footer p, .menus h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute;
-  top: 40%;
+  top: 30%;
+}
+@media screen and (min-width: 768px) {
+  .loader__text-slide-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    top: 40%;
+  }
 }
 .loader__text-slide-show__pretext {
   font-family: "Shrikhand";
   font-size: 50px;
-  margin-right: 20px;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .loader__text-slide-show__pretext {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
 }
 .loader__text-slide-show__container {
   overflow: hidden;
@@ -191,50 +203,55 @@ footer p, .menus h2 {
   align-items: center;
   flex-direction: row;
   position: absolute;
-  bottom: 40%;
+  bottom: 30%;
+}
+@media screen and (min-width: 768px) {
+  .loader__icons {
+    bottom: 45%;
+  }
 }
 .loader__icons__container {
   width: 350px;
 }
 .loader__icons__container i:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.loader__icons__container i:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.loader__icons__container i:nth-child(3) {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-.loader__icons__container i:nth-child(2) {
+.loader__icons__container i:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.loader__icons__container i:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.loader__icons__container i:nth-child(6) {
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-.loader__icons__container i:nth-child(3) {
+.loader__icons__container i:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.loader__icons__container i:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.loader__icons__container i:nth-child(9) {
   -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s;
 }
-.loader__icons__container i:nth-child(4) {
-  -webkit-animation-delay: 1.2s;
-  animation-delay: 1.2s;
-}
-.loader__icons__container i:nth-child(5) {
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-}
-.loader__icons__container i:nth-child(6) {
-  -webkit-animation-delay: 1.8s;
-  animation-delay: 1.8s;
-}
-.loader__icons__container i:nth-child(7) {
-  -webkit-animation-delay: 2.1s;
-  animation-delay: 2.1s;
-}
-.loader__icons__container i:nth-child(8) {
-  -webkit-animation-delay: 2.4s;
-  animation-delay: 2.4s;
-}
-.loader__icons__container i:nth-child(9) {
-  -webkit-animation-delay: 2.7s;
-  animation-delay: 2.7s;
-}
 .loader__icons__container i:nth-child(10) {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 .loader__icons__container i {
   color: transparent;
@@ -243,34 +260,58 @@ footer p, .menus h2 {
   letter-spacing: 5px;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-animation: icons-flashing 1s linear infinite backwards;
-  animation: icons-flashing 1s linear infinite backwards;
+  -webkit-animation: loader-icons 3s linear infinite backwards;
+  animation: loader-icons 3s linear infinite backwards;
 }
 
-@-webkit-keyframes icons-flashing {
+@-webkit-keyframes loader-icons {
   0% {
     opacity: 0;
     text-shadow: 0 0 10px #FF79DA;
+    transform: translateY(10px);
+  }
+  25% {
+    transform: translateY(-10px);
+    text-shadow: 0 0 0 #FF79DA;
   }
   50% {
     opacity: 1;
+    transform: translateY(10px);
+    text-shadow: 0 0 10px #FF79DA;
+  }
+  75% {
+    transform: translateY(-10px);
+    text-shadow: 0 0 0 #FF79DA;
   }
   100% {
     opacity: 0;
     text-shadow: 0 0 10px #FF79DA;
+    transform: translateY(10px);
   }
 }
-@keyframes icons-flashing {
+@keyframes loader-icons {
   0% {
     opacity: 0;
     text-shadow: 0 0 10px #FF79DA;
+    transform: translateY(10px);
+  }
+  25% {
+    transform: translateY(-10px);
+    text-shadow: 0 0 0 #FF79DA;
   }
   50% {
     opacity: 1;
+    transform: translateY(10px);
+    text-shadow: 0 0 10px #FF79DA;
+  }
+  75% {
+    transform: translateY(-10px);
+    text-shadow: 0 0 0 #FF79DA;
   }
   100% {
     opacity: 0;
     text-shadow: 0 0 10px #FF79DA;
+    transform: translateY(10px);
   }
 }
 .header {
@@ -495,6 +536,10 @@ footer a:hover {
     margin-bottom: 3rem;
   }
 }
+.restaurant__card i {
+  right: 30px;
+  bottom: 30px;
+}
 .restaurant__card:hover {
   border-radius: 1rem;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.7);
@@ -503,6 +548,7 @@ footer a:hover {
   transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 .restaurant img {
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
   width: 100%;
@@ -521,7 +567,6 @@ footer a:hover {
   z-index: 2;
 }
 .restaurant__description {
-  position: relative;
   padding: 0.8rem;
 }
 .restaurant__description h3 {
@@ -615,6 +660,10 @@ footer a:hover {
 .menus .menus--fadein-14 {
   -webkit-animation: menus--fadein 0.8s 5.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
   animation: menus--fadein 0.8s 5.6s cubic-bezier(0.5, 0, 0.6, 1) backwards;
+}
+.menus i {
+  top: 1.5rem;
+  right: 1.5rem;
 }
 @media screen and (min-width: 992px) {
   .menus .menus__container {
