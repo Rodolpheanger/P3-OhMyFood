@@ -3,10 +3,10 @@
 .localisation {
     @include flex-center;
     background-color: #EAEAEA;
-    box-shadow: inset 0 .2rem .2rem #CECECE;
-    height: 3.1rem;
+    box-shadow: inset 0 3px 3px #CECECE;
+    height: 50px;
     i {
-        margin-right: .6rem;
+        margin-right: 10px;
     }
 }
 
@@ -16,9 +16,9 @@
     background-color: $color-bg-main;
     @include flex-center (column);
     text-align: center;
-    padding: 2.5rem;
+    padding: 40px;
     h2 {
-        padding: 0 1rem;
+        padding: 0 16px;
         @extend %default-margin-bottom;
     }
     p {
@@ -29,7 +29,7 @@
 // section - site user manual
 
 .user-manual {
-    padding: 3rem 1.25rem;
+    padding: 48px 20px;
 
     @include tablet {
         text-align: center;
@@ -80,21 +80,21 @@
     &__number {
         color: #fff;
         background-color: $color-primary;
-        border-radius: 2rem;
-        padding: .16rem .5rem;
+        border-radius: 32px;
+        padding: 2.5px 8px;
         position: absolute;
-        left: -1rem;
+        left: -16px;
     }    
     i {
         color: map-get($color-user-manual__i, default);
-        margin-right: 1rem;
+        margin-right: 16px;
         }
 }
 
 // section - restaurants results
 
 .restaurant {
-    padding: 3rem 1.25rem;
+    padding: 48px 20px;
     background-color: $color-bg-main;
     @include desktop {
         display: flex;
@@ -114,10 +114,10 @@
         position: relative;
         @extend %default-margin-bottom;
         @include card-style;
-        height: 16rem;
+        height: 256px;
         @include desktop {
             width: 45%;
-            margin-bottom: 3rem;
+            margin-bottom: 48px;
         }
         i {
             right: 30px;
@@ -138,21 +138,21 @@
 
     &__notification-new {
         display: block;
-        padding: .4rem .8rem;
-        font-size: .8rem;
+        padding: 6.5px 13px;
+        font-size: 13px;
         background-color: $color-tertiary;
         color: darken($color-tertiary, 40%);
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 16px;
+        right: 16px;
         z-index: 2;
 
     }
 
     &__description {
-        padding: .8rem;
+        padding: 13px;
         h3 {
-            margin-bottom: .5rem;
+            margin-bottom: 8px;
         }
     }
 }
