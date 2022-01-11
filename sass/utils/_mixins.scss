@@ -5,7 +5,7 @@
     flex-direction: map-get($flex-direction, $direction);
 }
 
-// mixins responsive
+// responsive
 
 @mixin tablet {
     @media screen and (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
@@ -23,7 +23,7 @@
     }
 }
 
-// mixin apparence du curseur
+// apparence du curseur
 
 @mixin cursor ($state: default) {
     cursor: map-get($cursor, $state);  
@@ -84,7 +84,7 @@
             background-clip: text;                       // propriété pour afficher le background du texte icone heart
     -webkit-text-stroke: 1.5px #000;                   // contour noir icone heart
     background-image: $heart-bg-image;                   // dégradé linéaire transparent sur 49% de sa hauteur
-    background-size: 100% 300%;                          // agrandissement taille du background 300% sur axe Y pour ne laisser apparaitre que la zone transparente
+    background-size: 100% 300%;                          // agrandissement taille du background 300% sur axe Y pour ne laisser apparaitre que la zone transparente quand non survolé
     @include transition (all);
     @include cursor($state);
         @if ($state == hover) or ($state == active) {

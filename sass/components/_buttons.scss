@@ -3,4 +3,7 @@
     &:hover {
         @include btn(hover);
     }
+    &:active {
+        @include btn(active);
+    }
 }
